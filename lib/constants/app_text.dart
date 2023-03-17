@@ -1,3 +1,3 @@
 class AppText {
-  static const String appBarTitle = 'AppBar';
+  static const String infoForKompani = "Компания жөнүндө\nкыскача маалымат";
 }
