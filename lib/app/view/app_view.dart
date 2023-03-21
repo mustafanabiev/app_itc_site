@@ -1,4 +1,4 @@
-import 'package:app_itc_site/modules/modules.dart';
+import 'package:app_itc_site/modules/header/header_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeView(),
+      home: const HeaderPage(),
     );
   }
 }
