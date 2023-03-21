@@ -5,8 +5,15 @@ import 'package:app_itc_site/theme/color/app_colors.dart';
 import 'package:app_itc_site/theme/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class TheQuestionsPage extends StatelessWidget {
+class TheQuestionsPage extends StatefulWidget {
   const TheQuestionsPage({super.key});
+
+  @override
+  State<TheQuestionsPage> createState() => _TheQuestionsPageState();
+}
+
+class _TheQuestionsPageState extends State<TheQuestionsPage> {
+  final ScrollController controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +21,6 @@ class TheQuestionsPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 120),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
@@ -27,12 +33,12 @@ class TheQuestionsPage extends StatelessWidget {
                 Row(
                   children: [
                     CustomButton(
-                      onPressed: () {},
+                      onPressed: () => leafThrough(true),
                       widget: const Icon(Icons.arrow_back),
                     ),
                     const SizedBox(width: 20),
                     CustomButton(
-                      onPressed: () {},
+                      onPressed: () => leafThrough(false),
                       widget: const Icon(Icons.arrow_forward),
                     ),
                   ],
@@ -44,6 +50,7 @@ class TheQuestionsPage extends StatelessWidget {
               width: 1200,
               height: 295,
               child: ListView.builder(
+                controller: controller,
                 scrollDirection: Axis.horizontal,
                 itemCount: developers.length,
                 itemBuilder: (context, index) {
@@ -86,6 +93,16 @@ class TheQuestionsPage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void leafThrough(bool reverced) {
+    controller.animateTo(
+      reverced
+          ? controller.position.minScrollExtent
+          : controller.position.maxScrollExtent,
+      duration: const Duration(seconds: 10),
+      curve: Curves.ease,
     );
   }
 }
