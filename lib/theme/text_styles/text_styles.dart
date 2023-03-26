@@ -10,6 +10,7 @@ class AppTextStyles {
     fontSize: 48,
     fontWeight: FontWeight.w700,
     color: AppColors.black,
+  );
 
   static const TextStyle ourGraduates = TextStyle(
     fontSize: 38,
@@ -24,6 +25,5 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
     wordSpacing: 2,
     height: 1.8,
-
   );
 }
