@@ -1,4 +1,6 @@
-import 'package:app_itc_site/modules/info/info_page.dart';
+
+import 'package:app_itc_site/modules/the_questions/the_questions_page.dart';
+
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -11,7 +13,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const InfoPage(),
+
+      home: const TheQuestionsPage(),
+
     );
   }
 }
