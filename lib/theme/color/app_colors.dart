@@ -9,4 +9,5 @@ class AppColors {
   static const Color grey = Color(0xffD6D6D6);
   static const Color greyDivider = Color(0xffCBCBCB);
   static const Color cardColor = Color(0xffFFF4F1);
+  static const Color cardColor = Color(0xffF9F9F9);
 }

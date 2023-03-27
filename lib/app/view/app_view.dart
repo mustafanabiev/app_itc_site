@@ -1,5 +1,8 @@
-import 'package:app_itc_site/modules/the_questions/the_questions_page.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../modules/appsAndTeam/apps_and_teams_page.dart';
+import '../../modules/home/view/home_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -7,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
