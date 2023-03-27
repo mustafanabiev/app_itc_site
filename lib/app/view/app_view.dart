@@ -1,8 +1,7 @@
-
-import 'package:app_itc_site/modules/home/view/home_view.dart';
-
-
 import 'package:flutter/material.dart';
+
+import '../../modules/appsAndTeam/apps_and_teams_page.dart';
+import '../../modules/home/view/home_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AppsAndTeamsPage(),
+      home: const HomeView(),
     );
   }
 }

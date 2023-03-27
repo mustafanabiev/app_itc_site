@@ -1,4 +1,4 @@
-import 'package:app_itc_site/components/components.dart';
+import 'package:app_itc_site/components/button/custom_button.dart';
 import 'package:app_itc_site/constants/constants.dart';
 import 'package:app_itc_site/models/developers_model.dart';
 import 'package:app_itc_site/theme/color/app_colors.dart';

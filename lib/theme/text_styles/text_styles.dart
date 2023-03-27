@@ -16,7 +16,7 @@ class AppTextStyles {
   );
   static const TextStyle web = TextStyle(
     fontSize: 18,
-
+  );
   static const TextStyle infoForKompaniTextsyle = TextStyle(
     fontSize: 48,
     fontWeight: FontWeight.w700,
