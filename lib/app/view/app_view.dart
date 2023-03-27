@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../../modules/appsAndTeam/apps_and_teams_page.dart';
@@ -11,10 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeView(),
+      home: const TheQuestionsPage(),
     );
   }
 }
