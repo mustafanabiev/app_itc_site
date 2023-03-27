@@ -5,6 +5,17 @@ class AppTextStyles {
   static const TextStyle appBar = TextStyle(
     fontSize: 20,
   );
+  static const TextStyle button = TextStyle(
+    fontSize: 35,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const TextStyle tafhim = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle web = TextStyle(
+    fontSize: 18,
 
   static const TextStyle infoForKompaniTextsyle = TextStyle(
     fontSize: 48,

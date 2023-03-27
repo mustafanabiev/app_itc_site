@@ -1,4 +1,6 @@
+
 import 'package:app_itc_site/modules/home/view/home_view.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -8,11 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeView(),
+      home: const AppsAndTeamsPage(),
     );
   }
 }
