@@ -1,5 +1,9 @@
 class AppText {
+
+  static const String infoForKompani = "Компания жөнүндө\nкыскача маалымат";
+
   static const String appBarTitle = 'AppBar';
+
   static const String jasalgantirkeme = 'Жасалган тиркемелер';
   static const String Tafhim = 'Tafhim Hasan';
   static const String web = 'Web Devoloper';
@@ -10,6 +14,10 @@ class AppText {
   static const String helalHafiz = 'Helal Hafiz ';
   static const String digitalMarketer = 'Digital Marketer';
   static const String bizdinkomanda = 'Биздин команда';
+
+  static const String ourGraduates = 'Биздин бүтүрүүчүлөр';
+
+
 }
 
 class AppTextt {

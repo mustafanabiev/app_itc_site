@@ -177,5 +177,6 @@ class _AppsAndTeamsPageState extends State<AppsAndTeamsPage> {
         ),
       ),
     );
+
   }
 }
