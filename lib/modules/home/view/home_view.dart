@@ -1,14 +1,12 @@
+import 'package:app_itc_site/components/components.dart';
 import 'package:app_itc_site/constants/constants.dart';
-import 'package:app_itc_site/models/developers_model.dart';
+import 'package:app_itc_site/models/model.dart';
 import 'package:app_itc_site/theme/text_styles/text_styles.dart';
 import 'package:app_itc_site/theme/theme.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/button/custom_button.dart';
-import '../../appbanner/appbanner.dart';
-
 class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -55,11 +53,7 @@ class _HomeViewState extends State<HomeView> {
                 width: 415,
                 height: 555,
                 color: AppColors.red,
-                child: Image.asset(
-                  "images/info.png",
-                  width: 409,
-                  height: 474,
-                ),
+                child: Image.asset("images/info.png", width: 409, height: 474),
               ),
               const SizedBox(width: 111),
               Column(
@@ -261,6 +255,53 @@ class _HomeViewState extends State<HomeView> {
                 );
               },
             ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Көп суралуучу суроолор',
+                style: AppTextStyles.button,
+              ),
+              const SizedBox(height: 101),
+              const ListContainer(
+                text: AppText.theGuestions1,
+                text2:
+                    'Our designers and engineers know collaboration is the  essence of any project It’s a simple\n philosophy we followed  for nearly two decades philosophy we followed\n for nearly two decades...',
+                bottom: true,
+              ),
+              const SizedBox(height: 40),
+              const ListContainer(
+                text: AppText.theGuestions1,
+                text2:
+                    "Our designers and engineers know collaboration is the  essence of any project It’s a simple\n philosophy we followed  for nearly two decades philosophy we followed\n for nearly two decades...",
+                bottom: true,
+              ),
+              const SizedBox(height: 40),
+              const ListContainer(
+                text: AppText.theGuestions2,
+                text2:
+                    "Our designers and engineers know collaboration is the  essence of any project It’s a simple\nphilosophy we followed  for nearly two decadesphilosophy we followed",
+                bottom: true,
+              ),
+              const SizedBox(height: 40),
+              const ListContainer(
+                text: AppText.theGuestions3,
+                text2:
+                    "Our designers and engineers know collaboration is the  essence of any project It’s a simple\nphilosophy we followed  for nearly two decades philosophy we followed\nfor nearly two decades...",
+                bottom: false,
+              ),
+              const SizedBox(height: 92),
+              Row(
+                children: const [
+                  Text(AppText.theGuestions5),
+                  Text(
+                    AppText.theGuestions6,
+                    style: AppTextStyles.guestionStyletext,
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),

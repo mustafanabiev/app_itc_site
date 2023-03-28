@@ -24,7 +24,7 @@ class AppTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w500,
     color: Color(0xffFF693A),
-=======
+  );
   static const TextStyle button = TextStyle(
     fontSize: 35,
     fontWeight: FontWeight.bold,
