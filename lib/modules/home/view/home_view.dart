@@ -43,10 +43,116 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
+      appBar: AppBar(
+        backgroundColor: AppColors.white,
+        elevation: 0,
+        title: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 120),
+          child: Column(
+            children: [
+              const SizedBox(height: 5),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Image.asset('images/logo.png', width: 48),
+                  const SizedBox(width: 60),
+                  AppBarTitle(onPressed: () {}, title: 'Home'),
+                  AppBarTitle(onPressed: () {}, title: 'Компания жөнүндө'),
+                  AppBarTitle(onPressed: () {}, title: 'Тиркемелер'),
+                  AppBarTitle(onPressed: () {}, title: 'Бизин команда'),
+                  AppBarTitle(onPressed: () {}, title: 'Бүтүрүүчүлөр'),
+                  AppBarTitle(onPressed: () {}, title: 'Суроолор'),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
       body: ListView(
         children: [
+          const SizedBox(height: 120.0),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const SizedBox(width: 122.0),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 47),
+                  const Text(
+                    'Курс тууралуу \nкызыктуу тема \nжазгыла',
+                    style: TextStyle(
+                      color: Color(0xff201144),
+                      fontSize: 67.0,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 47),
+                  const Text(
+                    'Not all mentors are created equal. The best mentors share some \nQualities. You’ll want to look for these attributes',
+                    style: TextStyle(
+                      color: Color(0xff595959),
+                      fontSize: 18,
+                      wordSpacing: 5,
+                      height: 1.8,
+                    ),
+                  ),
+                  const SizedBox(height: 47),
+                  SizedBox(
+                    width: 207,
+                    height: 62,
+                    child: CustomButton(
+                      onPressed: () {},
+                      widget: const Text(
+                        'Жазылуу',
+                        style: TextStyle(
+                          color: AppColors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                          fontStyle: FontStyle.normal,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 110,
+              ),
+              Container(
+                width: 509,
+                height: 665,
+                color: AppColors.red,
+                child: Image.asset(
+                  "assets/images/girl.png",
+                  width: 409,
+                  height: 474,
+                ),
+              ),
+              const SizedBox(width: 122.0),
+            ],
+          ),
+          const SizedBox(height: 247.0),
+          Container(
+            height: 247.0,
+            color: AppColors.blue,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                OthersWidget(quantity: '33k+', lable: 'Студенттер'),
+                OthersWidget(quantity: '2k+', lable: 'Сын-пикирлер'),
+                OthersWidget(quantity: '150+', lable: 'Менторлор'),
+                OthersWidget(quantity: '620+', lable: 'Курстар'),
+                OthersWidget(quantity: '20k+', lable: 'Сабактар'),
+              ],
+            ),
+          ),
+          const SizedBox(height: 171),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 120, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 120),
             child: Column(
               children: [
                 Row(
@@ -57,8 +163,11 @@ class _HomeViewState extends State<HomeView> {
                       width: 415,
                       height: 555,
                       color: AppColors.red,
-                      child: Image.asset("images/info.png",
-                          width: 409, height: 474),
+                      child: Image.asset(
+                        "images/info.png",
+                        width: 409,
+                        height: 474,
+                      ),
                     ),
                     const SizedBox(width: 111),
                     Column(
@@ -470,6 +579,60 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class AppBarTitle extends StatelessWidget {
+  const AppBarTitle({
+    super.key,
+    required this.title,
+    this.onPressed,
+  });
+
+  final String title;
+  final void Function()? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: onPressed,
+      child: Text(title, style: AppTextStyles.appBarText),
+    );
+  }
+}
+
+class OthersWidget extends StatelessWidget {
+  const OthersWidget({super.key, required this.quantity, required this.lable});
+
+  final String quantity;
+  final String lable;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          quantity,
+          style: const TextStyle(
+            color: AppColors.red,
+            fontWeight: FontWeight.w600,
+            fontSize: 44,
+            fontStyle: FontStyle.normal,
+          ),
+        ),
+        const SizedBox(height: 7.0),
+        Text(
+          lable,
+          style: const TextStyle(
+            color: AppColors.white,
+            fontWeight: FontWeight.w600,
+            fontSize: 20,
+            fontStyle: FontStyle.normal,
+          ),
+        ),
+      ],
     );
   }
 }
